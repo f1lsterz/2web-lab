@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-image: url("background.jpg"); /* Додайте шлях до своєї картинки */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  /* background-color: #0056b3;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh; /* Фіксована висота відсотків висоти екрана */
+  overflow: auto;
+}
+
+.header p {
+  font-size: 20px;
+  padding: 0 40px; /* Add left and right padding */
+}
+
+.main {
+  /*background-color: #fff;*/
+  display: flex; /* Зробити .main контейнером flex */
+  height: 50vh; /* Фіксована висота відсотків висоти екрана */
+  width: 100%; /* Ширина 100% */
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side {
+  /*  background-color: indianred;*/
+  width: 25%; /* 25% ширина .right-side */
+  height: 100%; /* Висота блоку right-part (рівна висоті блоку main) */
+  overflow: hidden; /* Щоб відсікти будь-які вміст, що виходить за межі */
+}
+
+.footer {
+  /*background-color: #0056b3;*/
+  height: 25vh; /* Фіксована висота відсотків висоти екрана */
+  display: flex;
+}
+
+.top-part {
+  flex: 5; /* 85% висоти відсотків висоти блоку main */
+  display: flex;
+  flex-direction: row;
+}
+
+.left-part {
+  /*background-color: #825;*/
+  flex: 1; /* Займе всю доступну висоту .top-part */
+  overflow: auto;
+}
+
+.right-part {
+  flex: 1.8;
+  background-color: indianred;
+  width: 100%; /* Встановлюємо ширину 100%, щоб відео не перевищувало межі блоку */
+  height: 100%;
+  overflow: hidden; /* Щоб обрізати вміст, який може виходити за межі */
+  position: relative; /* Додаємо позицію relative, щоб здійснити розміщення відео */
+}
+
+.bottom-part {
+  /*background-color: #532;*/
+  flex: 1; /* 15% висоти відсотків висоти блоку main */
+  overflow: auto;
+}
+
+.bottom-part blockquote {
+  font-size: 16px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.left-part ul {
+  list-style: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+.left-part ul li {
+  margin-bottom: 20px;
+}
+
+.left-part ul li a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #008acc;
+  color: #000;
+  text-decoration: align;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.left-part ul li a:hover {
+  background-color: #0056b3;
+}
+
+.footer ol {
+  list-style-type: decimal;
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+  padding: 0 60px;
+}
+
+.right-part video {
+  width: 100%; /* Встановлюємо ширину 100% */
+  height: 100%; /* Встановлюємо висоту 100% */
+  object-fit: cover; /* Заповнюємо весь блок, обрізаючи зайвий вміст */
+  position: absolute; /* Зміщуємо відео в абсолютне положення в блоку .right-part */
+}
